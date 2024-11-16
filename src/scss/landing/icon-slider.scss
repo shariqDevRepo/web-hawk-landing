@@ -1,0 +1,11 @@
+@import "../mixins";
+
+.Landing-Icons{
+    max-width: 1300px;
+    margin:0 auto;
+    padding-top: 80px;
+    // margin-bottom: 80px;
+    @media (max-width:991px) {
+        padding-top: 30px;
+    }
+}

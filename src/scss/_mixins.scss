@@ -1,0 +1,106 @@
+@import './vars.scss';
+// Breakpoints Structure
+$custom-breakpoints: (
+    xs: (
+        minSize: 0px,
+        maxSize: 575px,
+        maxContWidth: 0px,
+        name: "XS",
+    ),
+    sm: (
+        minSize: 576px,
+        maxSize: 767px,
+        maxContWidth: 719px,
+        name: "SM",
+    ),
+    md: (
+        minSize: 768px,
+        maxSize: 991px,
+        maxContWidth: 720px,
+        name: "MD",
+    ),
+    lg: (
+        minSize: 992px,
+        maxSize: 1249px,
+        maxContWidth: 960px,
+        name: "LG",
+    ),
+    xl: (
+        minSize: 1250px,
+        maxSize: 1499px,
+        maxContWidth: 1250px,
+        name: "XL",
+    ),
+    max: (
+        minSize: 1500px,
+        maxSize: 0px,
+        maxContWidth: 1201px,
+        name: "MAX",
+    ),
+);
+
+
+
+@mixin responsive($breakpoint) {
+    @if map-has-key($custom-breakpoints, $breakpoint) {
+        @media (max-width: #{map-get(map-get($custom-breakpoints, $breakpoint), maxSize)}) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint `#{$breakpoint}` does not exist. Check case sensitivity.";
+    }
+}
+
+$heading-font: $mont;
+$heading-weight: 400;
+$heading-size: 60px;
+$heading-color: #202636;
+
+
+$text-font: $mont;
+$text-weight: 300;
+$text-size: 26px;
+$text-color: #202636CC; // 80 opacity
+
+
+@mixin typo($font-family, $weight, $size, $color) {
+    $important-declaration: " !important";
+
+    font-family: $font-family;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+
+// Mixin definition
+@mixin button-style {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    font-family: $mont;
+    font-size: 28px;
+    font-weight: 700;
+    border: 1px solid #FFFFFF;
+    color: $blue;
+    padding: 24px 59px;
+    cursor: pointer;
+  }
+
+  @mixin heading {
+    font-family: $mont;
+    font-weight: 400;
+    font-size: 60px;
+    color: #202636;
+    text-transform: capitalize;
+    .bold{
+        font-weight: 500;
+        color: #4F46E5;
+    }
+  }
+
+  @mixin text {
+    font-family: $mont;
+    font-weight: 300;
+    font-size: 26px;
+    color: #202636CC;
+  }

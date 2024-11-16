@@ -1,0 +1,51 @@
+@import "../mixins";
+
+.text-with-button-block{
+    padding-top: 100px;   
+    // margin: ;    
+    margin: 0px 20px;
+    @media (max-width:991px) {
+        padding-top: 50px;
+    }
+    .wrap-text-with-button{
+         padding: 105px 0;
+         border-radius: 32px;
+         @media (max-width:991px) {
+            background-size: cover;
+            background-position: bottom;
+            padding: 100px 15px;
+        }
+        .content-block{
+            max-width: 892px;
+            margin:0 auto;
+            text-align: center;
+            .heading{
+                font-family: $mont;
+                font-size: 40px;
+                font-weight: 700;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                @media (max-width:576px) {
+                    font-size: 30px;
+                }
+            }
+            .text{
+                @include text;
+                color: #FFFFFF;
+                margin-top: 26px;
+                margin-bottom: 64px;
+               @media (max-width:576px) {
+                font-size: 14px;
+               }
+            }
+            .button{
+                @include button-style;
+                display: inline-block;
+                @media (max-width:767px) {
+                    padding: 18px 45px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

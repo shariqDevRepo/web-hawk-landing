@@ -1,0 +1,101 @@
+@import "../mixins";
+
+.action-visitor-data{
+    padding: 100px 45px;
+    background-color: #F7F6FF;
+    @media (max-width:991px) {
+        padding: 50px 45px;
+    }
+    .wrap-action-data{
+        max-width: 1300px;
+        margin: 0 auto;
+        .container-block{
+            display: flex;
+            // flex-wrap: wrap;
+            background-color: #4F46E5;
+            padding: 58px 25px;
+            border-radius: 32px;
+            // column-gap: 75px;
+            overflow: hidden;
+            @media (max-width:991px) {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                padding-bottom: 0;
+            }
+            .image-block{
+                position: relative;
+                flex: 0 0 50%;
+                @media (max-width:991px) {
+                    flex: 0 0 100%;
+                    margin-top: 20px;
+                    
+                }
+                
+                @media (max-width:767px) {
+                    flex: 0 0 100%;
+                    margin-top: 0;
+                }
+                img{
+                    position: absolute;
+                    right: 40px;
+                    // width: 889px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 100%;
+                    @media (max-width:991px) {
+                        position: relative;
+                        transform: none;
+                        right: 0;
+                        width: 100%;
+                        bottom: -40px;
+                    }
+                }
+            }
+            .content-block{
+                flex: 0 0 50%;
+                padding-left: 30px;
+                @media (max-width:991px) {
+                    flex: 0 0 100%;
+                    text-align: center;
+                    padding-left: 0;
+                }
+                    .sub-heading{
+                        font-family: $mont;
+                        font-size: 24px;
+                        font-weight: 900;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                        @media (max-width:991px) {
+                            font-size: 16px;
+                        }
+                    }
+                    .heading{
+                        @include heading;
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                        color: #ffffff;
+
+                        .bold{
+                            font-weight: 600;
+                            color: #ffffff;
+                        }
+                        @media (max-width:1300px) {
+                            font-size: 4.286vw;
+                        }
+                        @media (max-width:991px) {
+                            font-size: 28px;
+                            margin-bottom: 24px;
+                        }
+                    }
+                    .text{
+                        @include text;
+                        color: #ffffff;
+                        @media (max-width:991px) {
+                            font-size: 18px;
+                        }
+                    }
+                
+            }
+        }
+    }
+}

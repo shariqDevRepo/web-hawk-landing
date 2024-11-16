@@ -1,0 +1,71 @@
+@import "../mixins";
+
+.why-choose-block{
+    padding: 100px 45px;
+    @media (max-width:991px) {
+        padding: 50px 45px;
+    }
+    .wrap-why-us{
+        max-width: 1300px;
+        margin: 0 auto;
+        .content-block{
+            display: flex;
+            column-gap: 60px;
+            @media (max-width:991px) {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+            .content{
+                flex:0 0 50%;
+                flex-basis: calc(50% - 30px);
+                @media (max-width:991px) {
+                    flex: 100%;
+                    text-align: center;
+                }
+                .sub-heading{
+                    font-family: $mont;
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: #4F46E5;
+                    text-transform: uppercase;
+                    @media (max-width:576px) {
+                        font-size: 16px;
+                    }
+                }
+                .heading{
+                    @include heading;
+                    margin-top: 20px;
+                    margin-bottom: 40px;
+                    @media (max-width:1400px)  {
+                        font-size: 4vw;
+                    }
+                    .bold{
+                        font-weight: 600
+                    }
+                    @media (max-width:576px) {
+                        font-size: 28px;
+                        margin-top: 15px;
+                        margin-bottom: 25px;
+                    }
+                }
+                .text{
+                    @include text;
+                    @media (max-width:576px) {
+                        font-size: 18px;   
+                    }
+                }
+            }
+            .image{
+                flex-basis: calc(50% - 30px);
+                @media (max-width:991px) {
+                    flex: 100%;
+                    width: 100%;
+                    margin-bottom: 33px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

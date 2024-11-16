@@ -1,11 +1,33 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import Header from "./header";
+import HeroBanner from "./components/hero-banner";
+import Icons from "./components/IconSlider";
+import bg_grid from "@/assets/images/wrapper-bg-grid.png";
+import ImageBlurb from "./components/image-blurb";
+import PricingBlock from "./components/pricing-block";
+import WhyUs from "./components/why-us";
+import ActionData from "./components/action-data";
+import CtaBlock from "./components/cta-block";
+import Footer from "./footer";
 
 export default function Home() {
   return (
-
-    <div className={styles.page}>
-      <main className={styles.main}>
+  
+    <div className="main-wrapper">
+      <Header/>
+      <HeroBanner/>
+      <div className="wrapper-block" style={{ backgroundImage: `url(${bg_grid.src})`}}>
+        <Icons/>
+        <ImageBlurb/>
+        <PricingBlock/>
+        <WhyUs/>
+        <ActionData/>
+        <CtaBlock/>
+        <Footer/>
+      </div>
+      
+      {/* <main className={styles.main}>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -46,8 +68,8 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-      </main>
-      <footer className={styles.footer}>
+      </main> */}
+      {/* <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
@@ -90,7 +112,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }
