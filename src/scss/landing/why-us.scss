@@ -34,10 +34,15 @@
                 }
                 .heading{
                     @include heading;
+                    margin: 0 auto;
                     margin-top: 20px;
                     margin-bottom: 40px;
                     @media (max-width:1400px)  {
                         font-size: 4vw;
+                    }
+                    @media (max-width:576px) {
+                        max-width: 320px;
+                        
                     }
                     .bold{
                         font-weight: 600
