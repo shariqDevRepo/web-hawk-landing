@@ -17,6 +17,9 @@
                 font-size: 6.054vw;
                 margin-bottom: 30px;
             }
+            @media (max-width:500px) {
+                font-size: 30px;               
+            }
         }
         .content-wrapper {
             display: flex;
@@ -115,6 +118,9 @@
                         }
                         @media (max-width: 767px) {
                             font-size: 26px;
+                        }
+                        @media (max-width:500px) {
+                            
                         }
                     }
                     .description {
