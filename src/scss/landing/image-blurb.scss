@@ -69,10 +69,17 @@
                 .content-block {
                     padding-right: 25px;
                     padding-left: 0;
+                    @media (max-width: 767px) {
+                        padding-right: 0;
+                    }
                     .content {
                         .button {
-                            background-color: transparent;
-                            color: #231c91;
+                            @media (min-width:576px) {
+                                background-color: transparent;
+                                color: #231c91;    
+                            }
+                            
+                            
                         }
                     }
                 }
@@ -141,6 +148,11 @@
                             font-size: 20px;
                             padding: 21px 54px;
                             font-weight: bold;
+                        }
+                        @media (max-width:576px) {
+                            width: 100%;
+                            font-size: 18px;
+                            padding: 12px;
                         }
                     }
                 }

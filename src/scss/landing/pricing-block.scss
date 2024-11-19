@@ -92,7 +92,7 @@
                         border: 2px solid #231c91ad;
                         padding: 35px 33px;
                         @media (max-width:1200px) {
-                            padding: 25px 20px;
+                            padding: 25px 29px; 
                         }
                         .items{
                             margin-top: 63px;
@@ -119,6 +119,7 @@
                     width: 100%;
                     inset: 0;
                     height: 100%;
+                    border-radius: 32px;
                 }
                 .box{
                    position: relative;
@@ -126,11 +127,14 @@
                    background-color: #ffffff;
                    padding: 40px 33px;
                    @media (max-width:1200px) {
-                        padding: 25px 20px;     
+                        padding: 25px px;     
+                   }
+                   @media (max-width:420px) {
+                    padding: 15px 20px;
                    }
                 //    margin: 25px;
                    height: 100%;
-                   border-radius: 32px;
+                   border-radius: 22px;
                     .heading{
                         font-family: $mont;
                         font-size: 26px;
@@ -188,7 +192,7 @@
                         .item{
                             font-family: $mont;
                             font-size: 16px;
-                            font-weight: 600;
+                            font-weight: 500;
                             color: #202636;
                             list-style: disc;
                             &::marker{
@@ -199,7 +203,7 @@
                     .button{
                         @include button-style;
                         display: inline-block;
-                        font-weight: 500;
+                        font-weight: 600;
                         font-size: 12px;
                         padding: 12px 20px;
                         border-color: #231C91;
@@ -208,6 +212,8 @@
                             text-align: center;
                             padding: 10px 20px;
                             font-size: 16px;
+                            background-color: #231C91;
+                            color: #ffffff;
                         }
                     }
                 }
