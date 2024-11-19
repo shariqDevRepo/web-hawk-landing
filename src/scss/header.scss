@@ -146,3 +146,11 @@
         }
     }
 }
+
+
+.wrapper-block{
+    @media (max-width:700px) {
+        background-size: contain;
+        
+    }
+}
