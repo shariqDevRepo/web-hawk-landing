@@ -1,0 +1,42 @@
+@import "mixins";
+
+.how-it-work-wrapper{
+
+    .heading-wrapper{
+        .main-heading {
+            @include heading;
+            text-align: center;
+            margin-top: 160px;
+            margin-bottom: 70px;
+            @media (max-width: 991px) {
+                font-size: 6.054vw;
+                margin-bottom: 30px;
+            }
+            @media (max-width:500px) {
+                font-size: 30px;               
+            }
+        }
+    }
+
+    .image-blurb-block{
+        .wrap-image-blurb{
+            .main-heading{
+                display: none;
+            }
+            .content-wrapper{
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+       
+    }
+    
+}
+
+.pricing-wrapper{
+
+    .pricing-block{
+        padding-top: 160px;
+    }
+}

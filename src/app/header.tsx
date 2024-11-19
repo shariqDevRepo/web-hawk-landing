@@ -55,7 +55,7 @@ const Header = () => {
 
     return (
         <div className="Landing-Header">
-            <div className="logo" onClick={() => router.push("/Landing")}>
+            <div className="logo" onClick={() => router.push("/")}>
                 <LOGO />
             </div>
             <nav>
@@ -98,10 +98,10 @@ const Nav: FC<{ setMobileMenu: (data: boolean) => void }> = ({
     return (
         <ul>
             <li
-                className={pathname === "/Landing" ? "active" : ""}
+                className={pathname === "/" ? "active" : ""}
                 onClick={() => {
                     setMobileMenu(false);
-                    router.push("/Landing");
+                    router.push("/");
                     // scrollToSection("PRODUCT");
                 }}
             >

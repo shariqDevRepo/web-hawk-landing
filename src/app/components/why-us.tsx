@@ -17,11 +17,9 @@ export default function WhyUs() {
                 <div className="image">
                     <img src={image.src} alt="" /> 
                 </div>
-
             </div>
         </div>
     </div>
     
-
   )
 }
